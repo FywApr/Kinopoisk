@@ -1,5 +1,4 @@
 import type { FC } from "react";
-import { Button } from "../../components/button/Button";
 import { Header } from "../../components/header/Header";
 import { Link } from "react-router-dom";
 import homeIcon from "../../assets/aside/home.svg";
@@ -11,10 +10,10 @@ import channelsIcon from "../../assets/aside/tv-channels.svg";
 import seriesIcon from "../../assets/aside/tv-series.svg";
 import filmIcon from "../../assets/aside/film.svg";
 import playIcon from "../../assets/aside/play.svg";
-import fightClubBackground from "../../assets/main/fight-club.jpg";
-import favouriteIcon from "../../assets/main/favourite.svg";
-import fightClubCard from "../../assets/main/focus/fight-club.webp";
-import playSectionIcon from "../../assets/header/play.svg";
+import { Announcement } from "./sections/Announcement";
+import { Focus } from "./sections/Focus";
+import { Tickets } from "./sections/Tickets";
+import { Watching } from "./sections/Watching";
 
 export const Main: FC = function Main() {
     return (
@@ -83,71 +82,15 @@ export const Main: FC = function Main() {
 
                 <article className="bg-white">
                     {/* Announcement */}
-                    <section className="flex items-stretch h-[400px] m-10">
-                        <div className="flex-1 max-w-[500px] bg-black text-white p-6 flex flex-col justify-center">
-                            <h2 className="text-4xl font-bold mb-6">Fight Club</h2>
-                            <p className="mb-4 text-xs leading-relaxed">
-                                Фермер и робот бегут из космической тюрьмы навстречу приключениям. Захватывающий сай-фай с русской душой
-                            </p>
-                            <p className="mb-4 text-xs text-gray-300">
-                                <strong>Starring:</strong> Сергей Чихачёв, Григoрий Скрялкин, Сергей Бурунов, Влада Лукина, Ольга Жевакина, Артем Семакин, Елена Макова
-                            </p>
-                            <p className="mb-8 text-xs text-gray-300">
-                                <strong>Director:</strong> Сергей Васильев
-                            </p>
-                            <span className="text-orange text-xl font-semibold">Already in subscription</span>
-
-                            <div className="flex gap-3 mt-6">
-                                <Button variant="orange" className="text-lg px-8 py-3">
-                                    <img src={playSectionIcon} alt="play" className="mr-2 w-5 h-5" />
-                                    Watch
-                                </Button>
-                                <Button variant="dark" className="px-6 py-3">
-                                    <img src={favouriteIcon} alt="favourite" className="" />
-                                </Button>
-                            </div>
-                        </div>
-
-                        <div className="flex-1 relative min-h-[500px]">
-                            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/1 h-[400px] to-transparent z-5"></div>
-                            <img
-                                src={fightClubBackground}
-                                alt="Fight Club"
-                                className="w-full h-[400px] object-cover"
-                            />
-                        </div>
-                    </section>
-
+                    <Announcement />
                     {/* Focus */}
-                    <section className="m-10">
-                        <h2 className="text-2xl font-semibold mb-4">In focus</h2>
-                        <ul className="flex gap-2">
-                            <li className="w-56 h-76 flex flex-col justify-between bg-black">
-                                <Link to={'/'} className="w-56 h-76 flex flex-col justify-between bg-black">
-                                    <span className="text-white my-auto text-lg p-1.5 text-center">Lorem ipsum dolor sit ameasdadsadt.</span>
-                                    <img src={fightClubCard} alt="Fight Club" />
-                                </Link>
-                            </li>
-                            <li className="w-56 h-76 flex flex-col justify-between bg-black">
-                                <Link to={'/'} className="w-56 h-76 flex flex-col justify-between bg-black">
-                                    <span className="text-white my-auto text-lg p-1.5 text-center">Lorem ipsum dolor sit ameasdadsadt.</span>
-                                    <img src={fightClubCard} alt="Fight Club" />
-                                </Link>
-                            </li>
-                            <li className="w-56 h-76 flex flex-col justify-between bg-black">
-                                <Link to={'/'} className="w-56 h-76 flex flex-col justify-between bg-black">
-                                    <span className="text-white my-auto text-lg p-1.5 text-center">Lorem ipsum dolor sit ameasdadsadt.</span>
-                                    <img src={fightClubCard} alt="Fight Club" />
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to={'/'} className="w-56 h-76 flex flex-col justify-between bg-black">
-                                    <span className="text-white my-auto text-lg p-1.5 text-center">Lorem ipsum dolor sit ameasdadsadt.</span>
-                                    <img src={fightClubCard} alt="Fight Club" />
-                                </Link>
-                            </li>
-                        </ul>
-                    </section>
+                    <Focus />
+                    {/* Tickets */}
+                    <Tickets />
+                    {/* Watching Now */}
+                    <div className="bg-black text-white">
+                        <Watching />
+                    </div>
                 </article>
 
 
