@@ -14,18 +14,19 @@ import { Announcement } from "./sections/Announcement";
 import { Focus } from "./sections/Focus";
 import { Tickets } from "./sections/Tickets";
 import { Watching } from "./sections/Watching";
+import { Top } from "./sections/Top";
 
 export const Main: FC = function Main() {
     return (
         <div className="bg-[#f4f4f4]">
             <Header></Header>
-            <main className="container mx-auto px-48 flex">
+            <main className="container mx-auto px-40 flex">
                 {/* Left menu */}
-                <aside className="w-[300px] pt-7 pl-2 pr-12 border-r-1 border-gray-300 bg-white">
+                <aside className="w-[300px] pt-7 pl-10 pr-12 border-r-1 border-gray-300 bg-white">
                     <ul className="flex flex-col gap-4">
                         <li>
-                            <Link to={'/'} className="flex items-center gap-x-2 font-medium text-[rgba(0,0,0,.6)] hover:text-black transition-all group">
-                                <img src={homeIcon} alt="home" className="brightness-70 group-hover:brightness-10 transition-all" />
+                            <Link to={'/'} className="flex items-center gap-x-2 font-bold text-[rgba(0,0,0,.6)] text-black transition-all group">
+                                <img src={homeIcon} alt="home" className="brightness-0 group-hover:brightness-10 transition-all" />
                                 Home
                             </Link>
                         </li>
@@ -90,6 +91,7 @@ export const Main: FC = function Main() {
                     {/* Watching Now */}
                     <div className="bg-black text-white">
                         <Watching />
+                        <Top />
                     </div>
                 </article>
 
