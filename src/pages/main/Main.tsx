@@ -15,12 +15,13 @@ import { Focus } from "./sections/Focus";
 import { Tickets } from "./sections/Tickets";
 import { Watching } from "./sections/Watching";
 import { Top } from "./sections/Top";
+import { Devices } from "./sections/Devices";
 
 export const Main: FC = function Main() {
     return (
         <div className="bg-[#f4f4f4]">
             <Header></Header>
-            <main className="container mx-auto px-40 flex">
+            <main className="container mx-auto pt-20 px-40 flex">
                 {/* Left menu */}
                 <aside className="w-[300px] pt-7 pl-10 pr-12 border-r-1 border-gray-300 bg-white">
                     <ul className="flex flex-col gap-4">
@@ -92,6 +93,7 @@ export const Main: FC = function Main() {
                     <div className="bg-black text-white">
                         <Watching />
                         <Top />
+                        <Devices />
                     </div>
                 </article>
 

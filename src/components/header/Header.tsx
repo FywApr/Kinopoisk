@@ -8,7 +8,7 @@ import { Button } from "../button/Button";
 
 export const Header: FC = function Header() {
     return (
-        <header className="bg-[#141414] py-5 text-white">
+        <header className="bg-[#141414] py-5 text-white fixed top-0 left-0 right-0 z-50">
             <div className="container mx-auto px-48">
                 <nav className="flex justify-between items-center">
                     <Link to={'/'}>
@@ -26,7 +26,7 @@ export const Header: FC = function Header() {
                         <input
                             type="text"
                             placeholder="Films, tv-series, persons"
-                            className="pl-4 py-2 outline-none rounded-lg text-[rgba(255,255,255,0.7)] w-full placeholder-[rgba(255,255,255,0.5)] focus:text-dark focus:placeholder-gray-400 transition-all"
+                            className="pl-4 py-2 outline-none rounded-lg text-[rgba(255,255,255,0.7)] w-full placeholder-[rgba(255,255,255,0.5)] focus:text-dark focus:placeholder-gray-400 transition-all bg-transparent"
                         />
                         <img src={searchIcon} alt="search" className="cursor-pointer brightness-50 pr-2" />
                     </div>
