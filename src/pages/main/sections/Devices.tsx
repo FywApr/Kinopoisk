@@ -20,7 +20,7 @@ export const Devices: FC = function Devices() {
                 <img src={arrowIcon} className="h-5 ml-1" alt="Arrow" />
             </Link>
             <div className="flex">
-                <ul className="flex flex-wrap gap-2 max-w-[400px]">
+                <ul className="flex flex-wrap gap-2 max-w-[740px]">
                     {/* Double block */}
                     <li className="bg-[#141414] cursor-pointer w-72 h-32 p-6 hover:scale-101 hover:bg-white transition-all duration-200 group">
                         <Link to={''} className="flex flex-col justify-between h-full">
