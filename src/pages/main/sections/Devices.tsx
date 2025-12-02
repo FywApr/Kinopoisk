@@ -14,7 +14,7 @@ import androidWhiteIcon from "../../../assets/main/devices/android-white.svg"
 
 export const Devices: FC = function Devices() {
     return (
-        <section className="m-10">
+        <section className="p-10">
             <Link to={'/'} className="flex items-center mb-4">
                 <h3 className="text-2xl font-semibold">Watch on any device</h3>
                 <img src={arrowIcon} className="h-5 ml-1" alt="Arrow" />

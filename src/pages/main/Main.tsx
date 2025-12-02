@@ -16,6 +16,7 @@ import { Tickets } from "./sections/Tickets";
 import { Watching } from "./sections/Watching";
 import { Top } from "./sections/Top";
 import { Devices } from "./sections/Devices";
+import { Info } from "./sections/Info";
 
 export const Main: FC = function Main() {
     return (
@@ -95,6 +96,8 @@ export const Main: FC = function Main() {
                         <Top />
                         <Devices />
                     </div>
+                    {/* Info */}
+                    <Info />
                 </article>
 
 
