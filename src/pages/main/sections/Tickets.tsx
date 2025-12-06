@@ -11,7 +11,7 @@ export const Tickets: FC = function Tickets() {
 
     return (
         <section className="m-10 relative">
-            <Link to={'/'} className="flex items-center mb-4">
+            <Link to={'/'} className="inline-flex items-center mb-4">
                 <h2 className="text-2xl font-semibold">Movie tickets</h2>
                 <img src={arrowIcon} className="h-5 ml-1" alt="Arrow" />
             </Link>

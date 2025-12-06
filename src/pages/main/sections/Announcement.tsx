@@ -26,7 +26,7 @@ export const Announcement: FC = function Announcement() {
                         Watch
                     </Button>
                     <Button variant="dark" className="px-6 py-3">
-                        <img src={favouriteIcon} alt="favourite" className="" />
+                        <img src={favouriteIcon} alt="favourite"  />
                     </Button>
                 </div>
             </div>

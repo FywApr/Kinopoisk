@@ -17,6 +17,7 @@ import { Watching } from "./sections/Watching";
 import { Top } from "./sections/Top";
 import { Devices } from "./sections/Devices";
 import { Info } from "./sections/Info";
+import { ReleaseCalendar } from "./sections/ReleaseCalendar";
 
 export const Main: FC = function Main() {
     return (
@@ -24,7 +25,7 @@ export const Main: FC = function Main() {
             <Header></Header>
             <main className="container mx-auto pt-20 px-40 flex">
                 {/* Left menu */}
-                <aside className="w-[300px] pt-7 pl-10 pr-12 border-r-1 border-gray-300 bg-white">
+                <aside className="fixed z-100 w-[300px] h-full pt-7 pl-10 pr-12 border-r-1 border-gray-300 bg-white">
                     <ul className="flex flex-col gap-4">
                         <li>
                             <Link to={'/'} className="flex items-center gap-x-2 font-bold text-[rgba(0,0,0,.6)] text-black transition-all group">
@@ -83,7 +84,7 @@ export const Main: FC = function Main() {
                     </ul>
                 </aside>
 
-                <article className="bg-white">
+                <article className="pl-[300px] bg-white">
                     {/* Announcement */}
                     <Announcement />
                     {/* Focus */}
@@ -98,6 +99,8 @@ export const Main: FC = function Main() {
                     </div>
                     {/* Info */}
                     <Info />
+                    {/* Release Calendar */}
+                    <ReleaseCalendar />
                 </article>
 
 
