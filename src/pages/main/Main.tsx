@@ -18,14 +18,15 @@ import { Top } from "./sections/Top";
 import { Devices } from "./sections/Devices";
 import { Info } from "./sections/Info";
 import { ReleaseCalendar } from "./sections/ReleaseCalendar";
+import { Footer } from "../../components/footer/Footer";
 
 export const Main: FC = function Main() {
     return (
         <div className="bg-[#f4f4f4]">
             <Header></Header>
-            <main className="container mx-auto pt-20 px-40 flex">
+            <main className="container mx-auto pt-20 px-40 flex relative">
                 {/* Left menu */}
-                <aside className="fixed z-100 w-[300px] h-full pt-7 pl-10 pr-12 border-r-1 border-gray-300 bg-white">
+                <aside className="sticky w-[300px] h-screen flex-shrink-0 top-20 pt-7 pl-10 pr-12 border-r-1 border-gray-300 bg-white">
                     <ul className="flex flex-col gap-4">
                         <li>
                             <Link to={'/'} className="flex items-center gap-x-2 font-bold text-[rgba(0,0,0,.6)] text-black transition-all group">
@@ -83,8 +84,7 @@ export const Main: FC = function Main() {
                         </li>
                     </ul>
                 </aside>
-
-                <article className="pl-[300px] bg-white">
+                <article className="bg-white">
                     {/* Announcement */}
                     <Announcement />
                     {/* Focus */}
@@ -102,9 +102,8 @@ export const Main: FC = function Main() {
                     {/* Release Calendar */}
                     <ReleaseCalendar />
                 </article>
-
-
             </main>
+            <Footer />
         </div>
     )
 }
